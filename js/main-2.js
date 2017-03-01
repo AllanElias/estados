@@ -33,7 +33,6 @@ var estados = {
 
 var select_pais = document.getElementById("pais")
 
-var select_estado = document.getElementById("estados")
 
 for(item in estados){
 
@@ -41,33 +40,25 @@ for(item in estados){
 	option_pais.text = item ;
 	select_pais.add(option_pais);
 
-
-	var option_estado = document.createElement("option")
-	option_estado.text = estados[item] ;
-	select_estado.add(option_estado);
-
 }
 
 
-
-
 function get_estado(){
-	if (option_pais == México) {
 
-		for ([item] in estados){
+	var select_pais = document.getElementById("pais")
 
+	if ( select_pais == México) {
+
+		var select_estado = document.getElementById("estado")
+
+		for (item in estados){
+			var option_estado = document.createElement("option")
+			option_estado.text = estados[item] ;
+			select_estado.add(option_estado);
 		}
+	}	
 		
-	}
+}
 
+//
 
-/*
-	for(item in estados){
-		if (pais == México) 
-
-		else{
-
-		}
-	}
-
-}*/
